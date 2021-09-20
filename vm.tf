@@ -5,7 +5,7 @@ data "azurerm_image" "search" {
 }
 
 output "image_id" {
-  value = "/subscriptions/us-sharedimages-prod/resourceGroups/app-imagegallery-prod-eastus2/providers/Microsoft.Compute/images/Windows2019-DC-LTS-daily-1618388082"
+  value = "/subscriptions/ed5e2254-5d87-4255-b70e-1b5eba509f73/resourceGroups/app-imagegallery-prod-eastus2/providers/Microsoft.Compute/images/Windows2019-DC-LTS-daily-1618388082"
 }
 
   # Create a new Virtual Machine based on the Golden Image
