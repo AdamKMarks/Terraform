@@ -22,3 +22,14 @@ resource "azurerm_resource_group" "rg" {
   name     = "myTFResourceGroup"
   location = "eastus2"
 }
+
+resource "azurerm_virtual_network" "lab" {
+  name                = "aztf-labs-vnet"
+  location            = "eastus2"
+  resource_group_name = azurerm_resource_group.rg.name
+  address_space       = ["10.0.0.0/16"]
+  tags                = {
+    Environment = "Lab"
+    Project     = "AZTF Training"
+  }
+}
