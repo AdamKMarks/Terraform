@@ -33,3 +33,17 @@ resource "azurerm_virtual_network" "lab" {
     Project     = "AZTF Training"
   }
 }
+
+resource "azurerm_subnet" "lab-public" {
+  name                 = "aztf-labs-subnet-public"
+  resource_group_name  = azurerm_resource_group.rg.name
+  virtual_network_name = azurerm_virtual_network.lab.name
+  address_prefixes     = ["10.0.0.0/24"]
+}
+
+resource "azurerm_subnet" "lab-private" {
+  name                 = "aztf-labs-subnet-private"
+  resource_group_name  = azurerm_resource_group.rg.name
+  virtual_network_name = azurerm_virtual_network.lab.name
+  address_prefixes     = ["10.0.1.0/24"]
+}
