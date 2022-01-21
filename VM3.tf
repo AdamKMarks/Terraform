@@ -32,7 +32,7 @@ resource "azurerm_linux_virtual_machine" "lab-bastion" {
   size                  = "Standard_B1s"
   network_interface_ids = [azurerm_network_interface.lab-bastion.id]
   admin_username        = "adminuser"
-  admin_password        = "In$tig8or"
+  admin_password        = "terraform"
   disable_password_authentication = false
 
   os_disk {
