@@ -32,7 +32,7 @@ resource "azurerm_windows_virtual_machine" "lab-Win-2019" {
   size                  = "Standard_F2"
   network_interface_ids = [azurerm_network_interface.lab-Win-2019.id]
   admin_username        = "adminuser"
-  admin_password        = "In$tig8or"
+  admin_password        = "terraform"
 
   os_disk {
     caching              = "ReadWrite"
