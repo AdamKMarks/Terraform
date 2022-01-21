@@ -32,6 +32,6 @@ resource "azurerm_virtual_machine" "vm" {
   os_profile {
     computer_name  = "APPVM"
     admin_username = "admin"
-    admin_password = "in$tig8or"
+    admin_password = "terraform"
   }
 }
